@@ -1,0 +1,14 @@
+<h2>Recipes</h2>
+
+<ul>
+  <% @recipes.each do |recipe| %>
+    <li><a href="/<%= recipe['id'] %>"><%== recipe['title'] %></a></li>
+  <% end %>
+</ul>
+
+<h3>New Recipe</h3>
+<form action="/" method="post">
+  <input name="title"><br>
+  <textarea name="body" rows="25" cols="100"></textarea><br>
+  <input type="submit" value="Save">
+</form>

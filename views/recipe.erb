@@ -1,0 +1,7 @@
+<p><a href="/">back</a></p>
+
+<h1><%== @recipe['title'] %></h1>
+
+<% @recipe['body'].split(/\n/).each do |line| %>
+  <%== line %><br>
+<% end %>
