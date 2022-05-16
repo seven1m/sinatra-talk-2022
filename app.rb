@@ -36,3 +36,18 @@ post '/' do
   db.close
   redirect '/'
 end
+
+## fetch("http://localhost:4567/recipes", {method: "POST", headers: {'Content-Type':'application/json'}, body: JSON.stringify({title: "foo", body: "bar"})}).then(response => response.json()).then(console.log)
+#post '/recipes' do
+  #data = JSON.parse(request.body.read) rescue nil
+  #db = GDBM.new('data.db')
+  #id = db.size.to_s
+  #db[id] = {
+    #id: id,
+    #title: data['title'],
+    #body: data['body'],
+  #}.to_json
+  #db.close
+  #content_type 'application/json'
+  #{ status: 'ok' }.to_json
+#end
